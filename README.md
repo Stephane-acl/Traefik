@@ -88,7 +88,7 @@
 
 ## Commandes utiles
 * Supprimer les conteneurs, networks, volumes et images non utilisés :  ```docker system prune -a -f```
-* Pour IMPORTER un fichier .sql utiliser la commande ```cat dump/symfony_app_user.sql | docker exec -i mysql-container mysql -uuser -ppassword db_name --default-character-set=utf8```
+* Pour IMPORTER un fichier .sql utiliser la commande ```cat dump/symfony_app_user.sql | docker exec -i mysql-container mysql -uuser -ppassword db_name --default-character-set=utf8``` OU ```docker exec -i mysql-container mysql -uuser -ppassword name_db < data.sql```
 * Pour EXPORTER un fichier .sql utiliser ```docker exec CONTAINER /usr/bin/mysqldump -u root --password=root DATABASE > backup.sql --no-tablespaces```
 
 ## Ajouter un site sous docker en le connectant à traefik
